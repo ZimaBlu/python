@@ -1,7 +1,11 @@
 def only_ints(first, second):
-    all_ints = False
-    if isinstance(first,int) and isinstance(second,int):
-        all_ints = True
-    return all_ints
+    if isinstance(first, bool) or isinstance(second, bool):
+        isint = False
+    elif isinstance(first, int) and isinstance(second, int):
+        isint = True
+    else:
+        isint = False
+    return isint
 
-print(only_ints(1,1))
+
+print(only_ints("a", False))
